@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday Brother! 🎂</title>
+    <style>
+        /* Full Screen Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #ffdde1);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            margin: 0;
+        }
+
+        /* Large Birthday Card */
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+            z-index: 2;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #ff4081;
+            text-shadow: 0 0 10px rgba(255, 64, 129, 0.6);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 64, 129, 0.6); }
+            to { text-shadow: 0 0 20px rgba(255, 64, 129, 0.9); }
+        }
+
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        /* Interactive Button */
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Hidden Message */
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4081;
+            font-weight: bold;
+        }
+
+        /* Trivia Section */
+        .trivia {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        /* Birthday Quiz */
+        .quiz {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Balloon Game */
+        .balloon-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .balloon:after {
+            content: '';
+            width: 6px;
+            height: 20px;
+            background: black;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Birthday Card -->
+    <div class="card">
+        <h1>🎉 Happy Birthday, My Dear Brother! 🎂</h1>
+        <p class="message">
+            May Allah bless you with good health, immense happiness, and endless success.  
+            May all your dreams come true and your heart always be filled with peace and joy.  
+            You are the best brother, and I am grateful for you every day. 💖  
+            May you always be surrounded by love and kindness, and may your journey ahead be full of wonderful surprises and achievements.  
+            Wishing you countless moments of joy, laughter, and prosperity. Stay as amazing as you are! 🎊🎁🎈  
+        </p>
+        
+        <!-- Trivia Section -->
+        <div class="trivia">
+            🎈 Did you know? The most common birthday in the world is  1 February! 🎂
+        </div>
+
+        <!-- Birthday Quiz -->
+        <div class="quiz">
+            <p><b>Quick Birthday Quiz:</b> What is the traditional number of candles on a birthday cake?</p>
+            <button class="button" onclick="alert('One for each year of life! 🎂')">Answer</button>
+        </div>
+        
+        <!-- Interactive Button -->
+        <button class="button" onclick="showMessage()">Click for a Surprise!</button>
+        <p class="hidden-message" id="hiddenMessage">You are the best brother in the world! 🎁</p>
+
+        <!-- Balloon Game -->
+        <div class="balloon-container">
+            <div class="balloon" onclick="popBalloon(this)" style="background-color: red;"></div>
+            <div class="balloon" onclick="popBalloon(this)" style="background-color: blue;"></div>
+            <div class="balloon" onclick="popBalloon(this)" style="background-color: yellow;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Show Hidden Message
+        function showMessage() {
+            document.getElementById('hiddenMessage').style.display = 'block';
+        }
+
+        // Balloon Pop Game
+        function popBalloon(balloon) {
+            balloon.style.visibility = 'hidden';
+            alert('🎈 Pop! You burst the balloon! 🎉');
+        }
+    </script>
+</body>
+</html>
